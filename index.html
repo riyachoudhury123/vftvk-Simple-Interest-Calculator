@@ -1,16 +1,27 @@
 <html>
     <head>
-    <script src="script.js"></script>
+    <script>
+
+        function si()
+        {
+        p=document.getElementById("p").value;
+        t=document.getElementById("t").value;
+        r=document.getElementById("r").value;
+        result=document.getElementById("result");result.innerHTML="SIMPLE INTEREST="+(p*t*r/100);
+     }    
+    </script>
     <link rel="stylesheet" href="style.css">
     </head>
+
+
     <body>
+
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <p>Amount <input type="number"  id="p"></p> <br/>
+       <p>Interest Rate <input type="number"  id="r"></p> <br/>
+        <p style= "margin-top:1px";>No. of Years <input type="number"  id="t"> </p> <br/>
+        <button onclick="si()">Compute Interest</button>
+        Interest : <p id="result"></p>
     </body>
 </html>
